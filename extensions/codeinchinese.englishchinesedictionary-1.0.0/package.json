@@ -1,0 +1,51 @@
+{
+	"name": "EnglishChineseDictionary",
+	"displayName": "翻译(英汉词典)",
+	"description": "本地77万词条英汉词典，不依赖任何在线翻译API，无查询次数限制。可翻译驼峰和下划线命名，及对整个文件中的标识符批量翻译。Translate a selected identifier, or all the recognized identifiers in one source file.",
+	"version": "1.0.0",
+	"publisher": "CodeInChinese",
+	"engines": {
+		"vscode": "^1.29.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.翻译选中文本",
+				"title": "英汉词典"
+			},
+			{
+				"command": "editor.批量翻译标识符",
+				"title": "批量翻译标识符"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/program-in-chinese/vscode_english_chinese_dictionary.git"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "1.1.36",
+		"eslint": "^4.6.1",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "7a93f1bf-1a86-441e-bc0b-4548f5a3cfbb",
+		"publisherId": "8f90e41d-fe36-4057-bbce-c44b3a64a8bd",
+		"publisherDisplayName": "中文编程"
+	}
+}
